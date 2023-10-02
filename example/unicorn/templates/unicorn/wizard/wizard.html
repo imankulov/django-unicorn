@@ -1,0 +1,12 @@
+{% load unicorn %}
+<div>
+  <h1>Simple wizard</h1>
+
+  {% if step == 1 %}
+    {% unicorn "wizard/step1" id="step1" %}
+  {% elif step == 2 %}
+    {% unicorn "wizard/step2" id="step2" %}
+  {% else %}
+    UNKNOWN STEP {{ step }}
+  {% endif %}
+</div>
