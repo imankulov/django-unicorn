@@ -1,5 +1,16 @@
 <div>
   <div>Step 2</div>
-  <button unicorn:click="previous()">Previous</button>
-  <button unicorn:click="next()">Next</button>
+  <div style="display: flex; flex-direction: column; gap: 12px">
+
+    <input unicorn:model="address" type="text" id="address"/>
+    <input unicorn:model="city" type="text" id="city"/>
+    <input unicorn:model="state" type="text" id="state"/>
+    <input unicorn:model="zip_code" type="text" id="zip_code"/>
+
+
+    <div style="display: flex; gap: 12px">
+      <button unicorn:click="previous()" id="step2_previous">Previous</button>
+      <button unicorn:click="next()" id="step2_next">Next</button>
+    </div>
+  </div>
 </div>
