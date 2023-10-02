@@ -80,8 +80,6 @@ class ComponentRequest:
         self.key = self.body.get("key", "")
         self.hash = self.body.get("hash", "")
 
-        self.validate_checksum()
-
         self.action_queue = []
 
         for action_data in self.body.get("actionQueue", []):
